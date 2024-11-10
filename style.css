@@ -8,10 +8,16 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.containers{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-color);
+}
+.styles{
+    margin: 20px;
 }
 .box{
     width: 300px;
@@ -43,4 +49,44 @@ body{
     color: var(--primary);
     user-select: none;
     pointer-events: none;
+}
+
+.s2box{
+    width: 500px;
+    height: 350px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.s2ribbon{
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.s2ribbon::before, .s2ribbon::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #313131;
+    z-index: -1;
+}
+
+.s2ribbon::after{
+    bottom: 0;
+    right: 0;
+}
+
+.s2ribbon span{
+    position: absolute;
+    width: 220px;
+    height: 40px;
+    background-color: #da4747;
+    transform: rotate(45deg);
+    left: -22px;
+    top: 40px;
 }
